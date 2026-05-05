@@ -159,6 +159,7 @@ Before considering the work complete, verify:
 - **Keywords First**:
   - Prefer keywords for direct disclosure requests, direct prompt injection phrases, explicit bypass language, and exact risky mode names like `DAN` or `developer mode`.
   - Use explicit keyword references (e.g., `keywords.$reveal and keywords.$api_key`) when the condition requires specific evidence combinations. Use `any of keywords.*` only when every defined keyword is independently sufficient to indicate the behavior — this is rare for noisy categories.
+  - Avoid heavy regex as it may impact performance scanning.
 - **Semantics As Support**:
   - Use semantics to cover paraphrases and softer wording, not as a catch-all for broad detections.
   - Avoid short, vague semantic texts that describe a topic instead of malicious intent.
@@ -181,6 +182,10 @@ Before considering the work complete, verify:
   - Ensure all mandatory metadata fields are present and valid.
   - Avoid overloaded conditions that try to cover multiple attack families at once.
   - If a condition fails the **One-Line Complexity Gate** (step 1b), split the rule before proceeding.
+- **General Rule Info**:
+  - keywords is the less expensive in term of resources
+  - Semantic is second but could lead to false positive
+  - LLM is usually the most reliable but more expensive
 - **Test Design**:
   - Provide both positive (should match) and negative (should not match) test cases for every rule.
   - Use the `prompts` list in YAML to test multiple variations of an attack in a single test block.
