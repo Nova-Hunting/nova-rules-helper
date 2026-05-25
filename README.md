@@ -1,6 +1,6 @@
 # Nova Rules Helper (Agent Skill)
 
-An **LLM Agent Skill** that provides expert-level assistance for authoring, validating, and testing Nova rules. This skill transforms your AI assistant into a **specialized helper** for the [**NOVA Prompt Pattern Matching Framework**](https://github.com/nova-hunting/nova), ensuring your Nova detection patterns follow the best practices.
+An **LLM Agent Skill** that provides expert-level assistance for authoring, validating, and testing Nova rules. This skill transforms your AI assistant into a **specialized helper** for the [**NOVA Prompt Pattern Matching Framework**](https://github.com/Nova-Hunting/nova-framework), ensuring your Nova detection patterns follow the best practices.
 
 ## What This Skill Does
 
