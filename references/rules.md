@@ -19,6 +19,7 @@ rule YourRuleName
         date = "YYYY-MM-DD"
         // Optional fields
         reference = "URL or report name"
+        promptintel_url = "https://promptintel.novahunting.ai/..."
         modified = "YYYY-MM-DD"
 
     keywords:
@@ -51,6 +52,7 @@ All rules must include the following fields in the `meta` section:
 | `date` | Required | Initial creation date in `YYYY-MM-DD` format. |
 | `hash` | Optional | File hash for integrity verification. |
 | `reference` | Optional | External link to research, reports, or examples. |
+| `promptintel_url` | Optional | Link to the source [PromptIntel](https://promptintel.novahunting.ai) feed item a rule was curated from. |
 | `modified` | Optional | Last update date in `YYYY-MM-DD` format. |
 
 > **Note**: Metadata fields are strictly validated. Including unknown or unofficial fields will cause a validation error.

@@ -69,6 +69,7 @@ This gate applies at every stage: initial design, refinement, and final review. 
 - **Mandatory UUID**: ALWAYS use `scripts/generate_uuid.py` for all UUID fields.
 - Review [rules.md](references/rules.md) for syntax/metadata requirements.
 - Consult [CATEGORIES.md](references/CATEGORIES.md) for the official taxonomy.
+- If a rule is curated from PromptIntel, set optional `promptintel_url` to the source feed item URL. Keep `reference` for external research, reports, or examples instead of provenance.
 - Start with explicit lexical evidence for the risky behavior.
 - Use keywords or regex first when the attacker behavior is plainly visible in text.
 - Add semantics only where you need paraphrase coverage or softer coercive phrasing.
@@ -180,6 +181,7 @@ Before considering the work complete, verify:
 - **Rule Integrity**:
   - Use the most specific subcategory from `CATEGORIES.md`.
   - Ensure all mandatory metadata fields are present and valid.
+  - Use `promptintel_url` only for PromptIntel feed-item provenance; do not overload `reference` with source-feed tracking.
   - Avoid overloaded conditions that try to cover multiple attack families at once.
   - If a condition fails the **One-Line Complexity Gate** (step 1b), split the rule before proceeding.
 - **General Rule Info**:
